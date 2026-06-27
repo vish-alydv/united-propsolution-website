@@ -1,0 +1,163 @@
+import React from 'react';
+import { 
+  MapPin, 
+  Globe, 
+  ShieldCheck, 
+  Eye, 
+  Target 
+} from 'lucide-react';
+
+function About() {
+  const locations = [
+    {
+      id: 1,
+      title: "Corporate Office",
+      address: "Ground Floor, Plot no : 772, Mushedpur, DLF Phase 2, Sector 25, Gurugram, Shahpur, Haryana 122002"
+    },
+    {
+      id: 2,
+      title: "Sushant Lok Branch",
+      address: "Ground Floor, Block D, Plot no : 1355, Block C, Sushant Lok Phase I, Sector 43, Gurugram, Haryana 122009"
+    },
+    {
+      id: 3,
+      title: "Sector 56 Branch",
+      address: "E-169, Block E, Sector 56, Gurugram, Haryana 122001"
+    },
+    {
+      id: 4,
+      title: "Success Tower Branch",
+      address: "Suncity Success Tower, 312A, Sector 65, Gurugram, Haryana 122101"
+    },
+    {
+      id: 5,
+      title: "DLF Phase 1 Branch",
+      address: "The shopping mall, C 312, Arjun Marg, Block E, DLF Phase 1, Sector 26A, Gurugram, Haryana 122002"
+    },
+    {
+      id: 6,
+      title: "Manesar Branch",
+      address: "Shop B34, Sector 1 Main Rd, Market, Imt Manesar, Gurugram, Haryana 122052"
+    },
+    {
+      id: 7,
+      title: "Polo Reserve Point",
+      address: "Polo Reserve - Breez Builders, adjecent Central park, Atta, Rewasan, Haryana 122103"
+    }
+  ];
+
+  return (
+    <section className="about-page-section">
+      <div className="container">
+        
+        {/* Section 1: Who We Are Header */}
+        <div className="about-page-header">
+          <span className="about-subtitle-tag">OUR COMPANY</span>
+          <h1 className="about-main-title">WHO WE ARE</h1>
+          <div className="about-title-divider"></div>
+        </div>
+
+        {/* Section 2: Global Presence & Responsibility columns */}
+        <div className="about-intro-grid">
+          <div className="about-intro-col">
+            <div className="about-col-header">
+              <Globe size={24} className="col-icon" />
+              <h3>GLOBAL PRESENCE</h3>
+            </div>
+            <p className="about-highlight-text">
+              FOUNDED IN 2006 BY MR. NITIN SAINI & INCORPORATED IN 2013, UNITED PROPSOLUTIONS PVT. LTD. IS A TRUSTED REAL ESTATE CONSULTING COMPANY BASED IN GURUGRAM. WITH OVER 19 YEARS OF EXPERTISE, THE COMPANY HAS BUILT A STRONG REPUTATION FOR TRANSPARENCY, RELIABILITY, AND DELIVERING VALUE-DRIVEN REAL ESTATE SOLUTIONS.
+            </p>
+            <p className="about-normal-text">
+              United Propsolutions provides a full spectrum of real estate services across both residential and commercial segments, catering to the diverse needs of buyers, investors, and sellers. Our offerings include fresh property bookings from reputed developers, verified resale properties, and strategic investment opportunities designed to deliver value and growth.
+            </p>
+            <p className="about-normal-text">
+              With a highly dedicated and experienced team, we guide clients through every step of the property journey, from site visits and documentation to final possession. Our strong network of trusted developers and sellers allows us to present the best options tailored to individual requirements, ensuring transparency, reliability, and satisfaction. At United Propsolutions, we are committed to delivering a seamless, hassle-free, and rewarding real estate experience for every client.
+            </p>
+          </div>
+
+          <div className="about-intro-col">
+            <div className="about-col-header">
+              <ShieldCheck size={24} className="col-icon" />
+              <h3>RESPONSIBILITY</h3>
+            </div>
+            <p className="about-normal-text">
+              At United Propsolutions, we take <strong>responsibility</strong> seriously in every aspect of our operations. From guiding clients through property purchases to ensuring legal compliance and transparent dealings, we are committed to upholding the highest standards of professionalism and integrity.
+            </p>
+            <p className="about-normal-text">
+              We understand that buying or selling real estate is a significant decision, often involving substantial financial and emotional investment. That's why our team meticulously verifies all properties, maintains clear communication, and offers personalized solutions to meet every client's unique needs. Our responsibility extends beyond transactions — we strive to build long-term trust, deliver value, and ensure that every client experiences a seamless, confident, and rewarding real estate journey.
+            </p>
+            <p className="about-normal-text">
+              We take full responsibility for providing <strong>accurate information</strong> about every property, helping clients make informed decisions without confusion or risk. Our team ensures all legal and procedural requirements are handled efficiently, maintaining peace of mind throughout the process.
+            </p>
+            <p className="about-normal-text">
+              Responsibility also means <strong>supporting our clients even after possession</strong>. We remain available to address queries, provide guidance on property management, and ensure a smooth transition into their new home or investment, reinforcing the trust they place in us.
+            </p>
+          </div>
+        </div>
+
+        {/* Section 3: Vision & Mission cards */}
+        <div className="about-vision-grid">
+          <div className="about-vision-card">
+            <div className="card-header">
+              <div className="icon-wrapper">
+                <Eye size={24} />
+              </div>
+              <h3>OUR VISION</h3>
+            </div>
+            <div className="card-body">
+              <p>
+                <strong>Our Vision</strong> is to become the most trusted and <strong>client-centric real estate consulting company</strong> in India, setting benchmarks for transparency, reliability, and innovation. We aim to redefine the property experience by offering seamless solutions that empower clients to make informed decisions and achieve their dream of owning the perfect home or investment property.
+              </p>
+              <p>
+                We envision a future where every real estate transaction is <strong>efficient, transparent, and rewarding</strong>. By leveraging strong developer networks, cutting-edge technology, and a dedicated team of experts, United Propsolutions strives to create lasting relationships, deliver exceptional value, and contribute meaningfully to India's dynamic real estate landscape.
+              </p>
+            </div>
+          </div>
+
+          <div className="about-vision-card">
+            <div className="card-header">
+              <div className="icon-wrapper">
+                <Target size={24} />
+              </div>
+              <h3>OUR MISSION</h3>
+            </div>
+            <div className="card-body">
+              <p>
+                <strong>Our Mission</strong> is to provide <strong>end-to-end real estate solutions</strong> that are transparent, reliable, and tailored to the unique needs of each client. We aim to simplify the property journey, whether it's for residential or commercial purposes, ensuring a seamless experience from selection to possession.
+              </p>
+              <p>
+                We are committed to <strong>building trust, delivering value, and fostering long-term relationships</strong> with clients, developers, and investors. By leveraging our expertise, strong market network, and ethical practices, United Propsolutions strives to create opportunities that empower clients to make informed decisions and achieve their real estate goals with confidence and satisfaction.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Section 4: Our Presence locations */}
+        <div className="presence-section">
+          <div className="about-page-header">
+            <h2 className="about-main-title">OUR PRESENCE</h2>
+            <div className="about-title-divider"></div>
+          </div>
+
+          <div className="presence-locations-grid">
+            {locations.map((loc) => (
+              <div key={loc.id} className="presence-card">
+                <div className="presence-badge-header">
+                  <div className="presence-number">
+                    <span>{loc.id}</span>
+                  </div>
+                  <MapPin size={20} className="presence-pin-icon" />
+                </div>
+                <h4>{loc.title}</h4>
+                <p>{loc.address}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
+export default About;
