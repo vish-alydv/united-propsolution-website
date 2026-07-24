@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
 // Inline fallback social SVG icons
 const Instagram = ({ size = 24, ...props }) => (
@@ -36,7 +37,10 @@ function Footer() {
     <footer className="footer-section">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <div className="logo footer-logo">Dwello</div>
+          <div className="logo footer-logo">
+            <img src={logo} alt="United Prop Solutions Logo" />
+            <span>United Prop Solutions</span>
+          </div>
           <p className="brand-pitch">
             Bringing you closer to your dream home, one click at a time.
           </p>
@@ -52,7 +56,7 @@ function Footer() {
 
         <div className="footer-links-column">
           <h5>Support</h5>
-          <a href="#faq">FAQ</a>
+          <Link to="/faq">FAQ</Link>
           <Link to="/contact">Contact Us</Link>
           <a href="#help">Help Center</a>
           <a href="#terms">Terms of Service</a>

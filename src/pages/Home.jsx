@@ -25,6 +25,7 @@ import residencePa from '../assets/residence-pa.jpg';
 import avatarSarah from '../assets/avatar-sarah.jpg';
 import avatarMichael from '../assets/avatar-michael.jpg';
 import avatarEmily from '../assets/avatar-emily.jpg';
+import founder from '../assets/founder.png';
 
 function Home() {
   const [searchLocation, setSearchLocation] = useState('');
@@ -39,7 +40,7 @@ function Home() {
       location: 'San Francisco',
       rating: 5.0,
       avatar: avatarSarah,
-      text: 'Dwello truly cares about their clients. They listened to my needs and preferences and helped me find the perfect home in the Bay Area. Their professionalism and attention to detail are unmatched.'
+      text: 'United Prop Solutions truly cares about their clients. They listened to my needs and preferences and helped me find the perfect home in the Bay Area. Their professionalism and attention to detail are unmatched.'
     },
     {
       id: 2,
@@ -47,7 +48,7 @@ function Home() {
       location: 'San Diego',
       rating: 4.5,
       avatar: avatarMichael,
-      text: 'I had a fantastic experience working with Dwello. Their expertise and personalized service exceeded my expectations. I found my dream home quickly and smoothly. Highly recommended!'
+      text: 'I had a fantastic experience working with United Prop Solutions. Their expertise and personalized service exceeded my expectations. I found my dream home quickly and smoothly. Highly recommended!'
     },
     {
       id: 3,
@@ -55,7 +56,7 @@ function Home() {
       location: 'Los Angeles',
       rating: 5.0,
       avatar: avatarEmily,
-      text: 'Dwello made my dream of owning a home a reality! Their team provided exceptional support and guided me through every step of the process. I couldn\'t be happier with my new home!'
+      text: 'United Prop Solutions made my dream of owning a home a reality! Their team provided exceptional support and guided me through every step of the process. I couldn\'t be happier with my new home!'
     }
   ];
 
@@ -214,6 +215,54 @@ function Home() {
         </div>
       </section>
 
+      {/* Founder Highlight Section */}
+      <section className="home-founder-section">
+        <div className="container">
+          <div className="about-hero-grid">
+            <div className="about-founder-showcase">
+              <div className="about-founder-bg-circle"></div>
+              <img 
+                src={founder} 
+                alt="Mr. Nitin Saini - Founder of United Prop Solutions" 
+                className="about-founder-image"
+              />
+              <div className="about-founder-badge-name">
+                <strong>Mr. Nitin Saini</strong>
+                <span>Founder</span>
+              </div>
+              <div className="about-founder-badge-years">
+                19+ Years Experience
+              </div>
+            </div>
+            
+            <div className="about-hero-content">
+              <span className="about-hero-tag">OUR FOUNDER</span>
+              <div className="about-hero-divider"></div>
+              
+              <h2 className="about-hero-title-main">
+                A Message From Our Founder
+              </h2>
+              
+              <p className="about-hero-highlight">
+                “United Propsolutions was built with a single vision: to bring honesty, transparency, 
+                and absolute integrity to Gurugram's real estate consulting landscape.”
+              </p>
+              
+              <p className="about-hero-desc">
+                Founded in 2006 by Mr. Nitin Saini & incorporated in 2013, United Propsolutions Pvt. Ltd. 
+                is Gurugram's trusted real estate consulting partner. With over 19 years of expertise, the company 
+                has built a strong reputation for transparency, reliability, and delivering value-driven property solutions 
+                for every buyer and investor.
+              </p>
+              
+              <Link to="/about" className="about-hero-btn">
+                Learn More About Us
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Our Popular Residences Section */}
       <section id="service" className="residences-section container">
         <div className="residences-header">
@@ -309,7 +358,7 @@ function Home() {
         <div className="container">
           <h2 className="section-title testimonials-title">
             What People Say <br />
-            About Dwello
+            About United Prop Solutions
           </h2>
 
           <div className="testimonials-carousel-wrapper">
