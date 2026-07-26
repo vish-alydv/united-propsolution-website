@@ -2277,6 +2277,18 @@
   z-index: 1;
 }
 
+@keyframes floatFounder {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .about-founder-image {
   position: relative;
   max-height: 440px;
@@ -2285,6 +2297,7 @@
   display: block;
   z-index: 2;
   filter: drop-shadow(0 15px 30px rgba(59, 34, 90, 0.12)); /* Soft shadow overlay */
+  animation: floatFounder 6s ease-in-out infinite; /* Floating micro-animation */
 }
 
 /* Floating labels on founder photo */
@@ -2336,40 +2349,13 @@
 
 /* Responsive Styles for About Hero */
 @media (max-width: 1024px) {
-  .about-hero-title-main {
-    font-size: 34px;
-  }
-  
-  .about-founder-bg-circle {
-    width: 300px;
-    height: 300px;
-  }
-  
-  .about-founder-image {
-    max-height: 370px;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-hero-section {
-    padding: 60px 24px;
-  }
-  
   .about-hero-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 0.9fr 1.1fr; /* Maintain grid layout on tablets */
     gap: 40px;
   }
-  
-  .about-hero-content {
-    text-align: center;
-  }
-  
-  .about-hero-divider {
-    margin: 12px auto 24px;
-  }
-  
-  .about-founder-showcase {
-    height: 420px;
+
+  .about-hero-title-main {
+    font-size: 34px;
   }
   
   .about-founder-bg-circle {
@@ -2380,35 +2366,114 @@
   .about-founder-image {
     max-height: 380px;
   }
+
+  .about-founder-badge-name {
+    bottom: 30px;
+    left: 5px;
+  }
+
+  .about-founder-badge-years {
+    top: 40px;
+    right: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero-section {
+    padding: 40px 24px 60px; /* Maintain new compact spacing top padding of 40px */
+  }
+  
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  
+  .about-hero-content {
+    text-align: left;
+    padding: 0 10px;
+  }
+  
+  .about-hero-divider {
+    margin: 12px 0 24px;
+  }
+
+  .about-hero-title-main {
+    font-size: 32px;
+    text-align: left;
+  }
+
+  .about-hero-highlight {
+    font-size: 16px;
+    line-height: 1.7;
+    border-left: 2px solid var(--color-accent);
+    padding-left: 14px;
+  }
+  
+  .about-founder-showcase {
+    height: 400px;
+  }
+  
+  .about-founder-bg-circle {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .about-founder-image {
+    max-height: 360px;
+  }
+
+  .about-founder-badge-name {
+    bottom: 25px;
+    left: 10%;
+  }
+
+  .about-founder-badge-years {
+    top: 30px;
+    right: 10%;
+  }
 }
 
 @media (max-width: 480px) {
   .about-hero-title-main {
-    font-size: 28px;
+    font-size: 26px;
+  }
+
+  .about-hero-highlight {
+    font-size: 15px;
   }
   
   .about-founder-showcase {
-    height: 360px;
+    height: 330px;
   }
   
   .about-founder-bg-circle {
-    width: 260px;
-    height: 260px;
+    width: 240px;
+    height: 240px;
   }
   
   .about-founder-image {
-    max-height: 320px;
+    max-height: 300px;
   }
   
   .about-founder-badge-name {
     padding: 8px 16px;
-    bottom: 20px;
+    bottom: 15px;
+    left: 5%;
+  }
+
+  .about-founder-badge-name strong {
+    font-size: 12px;
+  }
+
+  .about-founder-badge-name span {
+    font-size: 10px;
   }
   
   .about-founder-badge-years {
     padding: 6px 12px;
-    top: 30px;
-    font-size: 11px;
+    top: 15px;
+    right: 5%;
+    font-size: 10px;
   }
 }
 
