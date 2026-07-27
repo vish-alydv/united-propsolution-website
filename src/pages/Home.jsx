@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  MapPin, 
-  Home as HomeIcon, 
-  ChevronDown, 
+  MapPin,
   Shield, 
   Sparkles, 
   ClipboardCheck, 
@@ -28,35 +26,31 @@ import avatarEmily from '../assets/avatar-emily.jpg';
 import founder from '../assets/founder.png';
 
 function Home() {
-  const [searchLocation, setSearchLocation] = useState('');
-  const [searchType, setSearchType] = useState('');
-  const [searchPrice, setSearchPrice] = useState('');
-
   // Testimonials Carousel State
   const testimonials = [
     {
       id: 1,
-      name: 'Sarah Nguyen',
-      location: 'San Francisco',
+      name: 'Pooja Sharma',
+      location: 'Gurugram',
       rating: 5.0,
       avatar: avatarSarah,
-      text: 'United Prop Solutions truly cares about their clients. They listened to my needs and preferences and helped me find the perfect home in the Bay Area. Their professionalism and attention to detail are unmatched.'
+      text: 'United Prop Solutions made buying our home in Sector 65 a seamless experience. They understood our requirement for a premium residential space and guided us to the perfect Godrej property. Their team handled all verification details flawlessly.'
     },
     {
       id: 2,
-      name: 'Michael Rodriguez',
-      location: 'San Diego',
+      name: 'Amit Verma',
+      location: 'New Delhi',
       rating: 4.5,
       avatar: avatarMichael,
-      text: 'I had a fantastic experience working with United Prop Solutions. Their expertise and personalized service exceeded my expectations. I found my dream home quickly and smoothly. Highly recommended!'
+      text: 'I wanted to invest in a luxury apartment in Gurugram, and United Prop Solutions provided outstanding consulting. Their market insight, transparent dealings, and strong builder networks helped me secure a high-growth property in Golf Course Road Extension.'
     },
     {
       id: 3,
-      name: 'Emily Johnson',
-      location: 'Los Angeles',
+      name: 'Rajesh Malhotra',
+      location: 'Noida',
       rating: 5.0,
       avatar: avatarEmily,
-      text: 'United Prop Solutions made my dream of owning a home a reality! Their team provided exceptional support and guided me through every step of the process. I couldn\'t be happier with my new home!'
+      text: 'Finding a trusted consulting partner in the NCR region is tough, but United Prop Solutions exceeded my expectations. They helped me find a verified plot in Antalya Hills with absolute transparency. Highly recommended for any homebuyer!'
     }
   ];
 
@@ -83,12 +77,6 @@ function Home() {
     }
   };
 
-  // Handle Search Submission
-  const handleSearch = (e) => {
-    e.preventDefault();
-    alert(`Searching for properties in Location: ${searchLocation || 'Any'}, Type: ${searchType || 'Any'}, Price: ${searchPrice || 'Any'}`);
-  };
-
   return (
     <>
       {/* Hero Section */}
@@ -102,72 +90,14 @@ function Home() {
             <p className="hero-description">
               Explore our curated selection of exquisite properties meticulously tailored to your unique dream home vision.
             </p>
-            <Link to="/contact" className="btn-primary hero-btn">Sign up</Link>
           </div>
           <div className="hero-image-wrapper">
             <img src={heroVilla} alt="Luxurious Modern Villa" className="hero-image" />
+            <div className="hero-floating-badge">
+              <span className="badge-title">Gurugram's Top Consultant</span>
+              <span className="badge-subtitle">100% Verified Listings</span>
+            </div>
           </div>
-        </div>
-
-        {/* Search Bar Overlay */}
-        <div className="search-bar-container">
-          <form className="search-bar" onSubmit={handleSearch}>
-            <div className="search-field">
-              <MapPin className="field-icon" size={20} />
-              <div className="field-inputs">
-                <label>Location</label>
-                <select 
-                  value={searchLocation} 
-                  onChange={(e) => setSearchLocation(e.target.value)}
-                >
-                  <option value="">Select location</option>
-                  <option value="San Francisco, California">San Francisco, CA</option>
-                  <option value="Beverly Hills, California">Beverly Hills, CA</option>
-                  <option value="Palo Alto, California">Palo Alto, CA</option>
-                </select>
-              </div>
-            </div>
-            
-            <div className="search-divider"></div>
-
-            <div className="search-field">
-              <HomeIcon className="field-icon" size={20} />
-              <div className="field-inputs">
-                <label>Type</label>
-                <select 
-                  value={searchType} 
-                  onChange={(e) => setSearchType(e.target.value)}
-                >
-                  <option value="">Select type</option>
-                  <option value="Villa">Villa</option>
-                  <option value="Apartment">Apartment</option>
-                  <option value="Penthouse">Penthouse</option>
-                </select>
-              </div>
-            </div>
-
-            <div className="search-divider"></div>
-
-            <div className="search-field">
-              <ChevronDown className="field-icon" size={20} />
-              <div className="field-inputs">
-                <label>Price Range</label>
-                <select 
-                  value={searchPrice} 
-                  onChange={(e) => setSearchPrice(e.target.value)}
-                >
-                  <option value="">Select price range</option>
-                  <option value="$500k - $1M">$500k - $1M</option>
-                  <option value="$1M - $3M">$1M - $3M</option>
-                  <option value="$3M+">$3M+</option>
-                </select>
-              </div>
-            </div>
-
-            <button type="submit" className="btn-primary search-submit-btn">
-              Sign up
-            </button>
-          </form>
         </div>
       </section>
 
@@ -181,36 +111,40 @@ function Home() {
         </div>
 
         <div className="why-us-grid">
+          {/* Card 1 */}
           <div className="feature-card">
             <div className="icon-wrapper">
               <Shield size={24} />
             </div>
-            <h4>Expert Guidance</h4>
-            <p>Benefit from our team's seasoned expertise for a smooth buying experience</p>
+            <h4>Trusted Guidance</h4>
+            <p>19+ years of professional real estate consultation and advisory expertise in NCR.</p>
           </div>
 
+          {/* Card 2 */}
           <div className="feature-card">
             <div className="icon-wrapper">
               <Sparkles size={24} />
             </div>
-            <h4>Personalized Service</h4>
-            <p>Our services adapt to your unique needs, making your journey stress-free</p>
+            <h4>Premium Projects</h4>
+            <p>Direct bookings and verified selections from market-leading developers like M3M and Godrej.</p>
           </div>
 
+          {/* Card 3 */}
           <div className="feature-card">
             <div className="icon-wrapper">
               <ClipboardCheck size={24} />
             </div>
-            <h4>Transparent Process</h4>
-            <p>Stay informed with our clear and honest approach to buying your home</p>
+            <h4>Verified Resales</h4>
+            <p>Thorough legal background checks and validation on all resale holdings.</p>
           </div>
 
+          {/* Card 4 */}
           <div className="feature-card">
             <div className="icon-wrapper">
               <Headphones size={24} />
             </div>
-            <h4>Exceptional Support</h4>
-            <p>Providing peace of mind with our responsive and attentive customer service</p>
+            <h4>End-to-End Support</h4>
+            <p>Seamless support from initial site visits and documentation to final possession handover.</p>
           </div>
         </div>
       </section>
@@ -243,10 +177,13 @@ function Home() {
                 A Message From Our Founder
               </h2>
               
-              <p className="about-hero-highlight">
-                “United Propsolutions was built with a single vision: to bring honesty, transparency, 
-                and absolute integrity to Gurugram's real estate consulting landscape.”
-              </p>
+              <div className="founder-quote-wrapper">
+                <span className="founder-quote-graphic">“</span>
+                <p className="about-hero-highlight">
+                  United Propsolutions was built with a single vision: to bring honesty, transparency, 
+                  and absolute integrity to Gurugram's real estate consulting landscape.
+                </p>
+              </div>
               
               <p className="about-hero-desc">
                 Founded in 2006 by Mr. Nitin Saini & incorporated in 2013, United Propsolutions Pvt. Ltd. 
@@ -273,12 +210,13 @@ function Home() {
           {/* Card 1 */}
           <div className="residence-card">
             <div className="residence-image-container">
-              <img src={residenceSf} alt="San Francisco, California" />
+              <div className="residence-badge">GURUGRAM SPECIAL</div>
+              <img src={residenceSf} alt="M3M Altitude, Sector 65" />
             </div>
             <div className="residence-details">
               <div className="residence-location">
                 <MapPin size={18} className="loc-icon" />
-                <span>San Francisco, California</span>
+                <span>Sector 65, Gurugram, India</span>
               </div>
               <div className="residence-features">
                 <div className="res-feat-item">
@@ -291,8 +229,8 @@ function Home() {
                 </div>
               </div>
               <div className="residence-footer">
-                <Link to="/contact" className="btn-primary res-card-btn">Sign up</Link>
-                <span className="residence-price">$2,500,000</span>
+                <Link to="/contact" className="btn-primary res-card-btn">Enquiry</Link>
+                <span className="residence-price">8.3 Cr Onwards</span>
               </div>
             </div>
           </div>
@@ -300,12 +238,41 @@ function Home() {
           {/* Card 2 */}
           <div className="residence-card">
             <div className="residence-image-container">
-              <img src={residenceBh} alt="Beverly Hills, California" />
+              <div className="residence-badge">PREMIUM APARTMENT</div>
+              <img src={residenceBh} alt="Godrej Sora, Sector 53" />
             </div>
             <div className="residence-details">
               <div className="residence-location">
                 <MapPin size={18} className="loc-icon" />
-                <span>Beverly Hills, California</span>
+                <span>Sector 53, Gurugram, India</span>
+              </div>
+              <div className="residence-features">
+                <div className="res-feat-item">
+                  <BedDouble size={16} />
+                  <span>3 Rooms</span>
+                </div>
+                <div className="res-feat-item">
+                  <Maximize size={16} />
+                  <span>1,800 sq ft</span>
+                </div>
+              </div>
+              <div className="residence-footer">
+                <Link to="/contact" className="btn-primary res-card-btn">Enquiry</Link>
+                <span className="residence-price">3.95 Cr Onwards</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 3 */}
+          <div className="residence-card">
+            <div className="residence-image-container">
+              <div className="residence-badge">LUXURY PROJECT</div>
+              <img src={residencePa} alt="M3M Antalya Hills, Sector 79" />
+            </div>
+            <div className="residence-details">
+              <div className="residence-location">
+                <MapPin size={18} className="loc-icon" />
+                <span>Sector 79, Gurugram, India</span>
               </div>
               <div className="residence-features">
                 <div className="res-feat-item">
@@ -318,35 +285,8 @@ function Home() {
                 </div>
               </div>
               <div className="residence-footer">
-                <Link to="/contact" className="btn-primary res-card-btn">Sign up</Link>
-                <span className="residence-price">$850,000</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 3 */}
-          <div className="residence-card">
-            <div className="residence-image-container">
-              <img src={residencePa} alt="Palo Alto, California" />
-            </div>
-            <div className="residence-details">
-              <div className="residence-location">
-                <MapPin size={18} className="loc-icon" />
-                <span>Palo Alto, California</span>
-              </div>
-              <div className="residence-features">
-                <div className="res-feat-item">
-                  <BedDouble size={16} />
-                  <span>6 Rooms</span>
-                </div>
-                <div className="res-feat-item">
-                  <Maximize size={16} />
-                  <span>4,000 sq ft</span>
-                </div>
-              </div>
-              <div className="residence-footer">
-                <Link to="/contact" className="btn-primary res-card-btn">Sign up</Link>
-                <span className="residence-price">$3,700,000</span>
+                <Link to="/contact" className="btn-primary res-card-btn">Enquiry</Link>
+                <span className="residence-price">1.9 Cr Onwards</span>
               </div>
             </div>
           </div>

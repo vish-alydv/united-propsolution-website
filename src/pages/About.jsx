@@ -150,7 +150,7 @@ function About() {
           </div>
 
           {/* Section 3: Vision & Mission cards */}
-          <div className="about-vision-grid">
+          <div id="about-vision" className="about-vision-grid" style={{ paddingTop: '20px' }}>
             <div className="about-vision-card">
               <div className="card-header">
                 <div className="icon-wrapper">

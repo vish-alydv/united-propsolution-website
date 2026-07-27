@@ -49,24 +49,22 @@ function Footer() {
         <div className="footer-links-column">
           <h5>About</h5>
           <Link to="/about">Our Story</Link>
-          <a href="#careers">Careers</a>
-          <a href="#team">Our Team</a>
-          <a href="#resources">Resources</a>
+          <Link to="/about#about-vision">Vision & Mission</Link>
+          <Link to="/about#about-presence">Our Presence</Link>
         </div>
 
         <div className="footer-links-column">
           <h5>Support</h5>
           <Link to="/faq">FAQ</Link>
           <Link to="/contact">Contact Us</Link>
-          <a href="#help">Help Center</a>
-          <a href="#terms">Terms of Service</a>
+          <a href="tel:+918512075100">Call Support</a>
         </div>
 
         <div className="footer-links-column">
-          <h5>Find Us</h5>
-          <a href="#events">Events</a>
-          <a href="#locations">Locations</a>
-          <a href="#newsletter">Newsletter</a>
+          <h5>Explore</h5>
+          <Link to="/">Home</Link>
+          <Link to="/properties">Properties</Link>
+          <Link to="/services">Services</Link>
         </div>
 
         <div className="footer-links-column">
