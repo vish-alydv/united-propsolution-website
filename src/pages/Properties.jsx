@@ -140,8 +140,8 @@ function Properties() {
     }
   ];
 
-  const renderGridSection = (title, subtitle, listings) => (
-    <div className="properties-dev-section">
+  const renderGridSection = (id, title, subtitle, listings) => (
+    <div id={id} className="properties-dev-section" style={{ paddingTop: '20px' }}>
       <div className="properties-page-header">
         {subtitle && <span className="properties-subtitle-tag">{subtitle}</span>}
         <h2 className="properties-main-title">{title}</h2>
@@ -186,13 +186,13 @@ function Properties() {
     <section className="properties-page-section">
       <div className="container">
         {/* Section 1: M3M */}
-        {renderGridSection("M3M", "", m3mListings)}
+        {renderGridSection("m3m-projects", "M3M", "", m3mListings)}
 
         {/* Section Divider */}
         <div className="properties-section-spacer"></div>
 
         {/* Section 2: GODREJ */}
-        {renderGridSection("GODREJ", "FIND YOUR PERFECT HOME", godrejListings)}
+        {renderGridSection("godrej-projects", "GODREJ", "FIND YOUR PERFECT HOME", godrejListings)}
       </div>
     </section>
   );

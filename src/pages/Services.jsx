@@ -42,7 +42,7 @@ function Services() {
 
           <div className="services-category-grid">
             {categories.map((cat) => (
-              <div key={cat.id} className="services-cat-card">
+              <div key={cat.id} id={cat.title.toLowerCase()} className="services-cat-card" style={{ paddingTop: '20px' }}>
                 <div className="cat-icon-circle">
                   {cat.icon}
                 </div>
